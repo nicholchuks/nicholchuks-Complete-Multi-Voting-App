@@ -10,6 +10,8 @@ const Candidates = () => {
   const token = useSelector((state) => state?.vote?.currentVoter?.token);
   const navigate = useNavigate();
 
+  //ACCESS CONTROL
+  // If the user is not logged in, redirect to the home page
   useEffect(() => {
     if (!token) {
       navigate("/");
